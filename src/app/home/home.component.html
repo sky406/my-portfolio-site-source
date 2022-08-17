@@ -1,17 +1,26 @@
 <div class="homescreen">
   <div class="homecontent">
-    <div class="folderGrid">
-      <a href="#" class="folder" (click)="addwindow('designs')"><img src="../../assets/folder_emptyc.svg" alt="" srcset=""><span class="foldertxt">designs</span></a>
+    <nav>
+      <div class="folderGrid">
+        <a href="#" class="folder" (dblclick)="addwindow('designs')"><img src="../../assets/folder_emptyc.svg" alt="" srcset=""><span class="foldertxt">designs</span></a>
 
-      <a href="#" class="folder" (click)="addwindow('websites')"><img src="../../assets/folder_emptyc.svg" alt="" srcset=""><span class="foldertxt">websites</span></a>
+        <a href="#" class="folder" (dblclick)="addwindow('websites')"><img src="../../assets/folder_emptyc.svg" alt="" srcset=""><span class="foldertxt">websites</span></a>
 
-      <a href="#" class="folder" (click)="addwindow('other')"><img src="../../assets/folder_emptyc.svg" alt="" srcset=""><span class="foldertxt">other</span></a>
+        <a href="#" class="folder" (dblclick)="addwindow('other')"><img src="../../assets/folder_emptyc.svg" alt="" srcset=""><span class="foldertxt">other</span></a>
 
-      <a href="#" class="folder" (click)="addwindow('me')"><img src="../../assets/meapp.svg" alt="" srcset=""><span class="foldertxt">about me</span></a>
-      <!-- note to self change the folders to the full folders later -->
-    </div>
+        <a href="#" class="folder" (dblclick)="addwindow('me')"><img src="../../assets/meapp.svg" alt="" srcset=""><span class="foldertxt">about me</span></a>
+        <!-- note to self change the folders to the full folders later -->
+      </div>
+    </nav>
     <!-- <img src="../../assets/folder_emptyc.svg" alt="" srcset="" class="fuck"> -->
-    <window *ngFor="let window of windows"></window>
+    <window *ngFor="let window of windows"
+    [type]="window.type"
+    [posx]="window.x"
+    [posy]="window.y"
+    [width]="window.w"
+    [height]="window.h"
+    [id]="window.id"></window>
+
   </div>
   <div class="taskbar">
     <div class="homebutton"></div>

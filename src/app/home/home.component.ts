@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit {
   addwindow(type:string)
   {
     this.windows.push({id:this.windows.length,type:type,w:300
-    ,h:400,x:90,y:69})
+    ,h:400,x:90,y:40})
     console.log(this.windows)
   }
 }

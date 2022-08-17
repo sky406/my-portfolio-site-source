@@ -49,9 +49,6 @@ $foldersize:69px;
   width: $foldersize;
 }
 
-.folder span{
-
-}
 
 .folder img
 {
@@ -60,4 +57,11 @@ $foldersize:69px;
 
 .foldertxt{
   text-align: center;
+}
+
+window{
+  position: absolute;
+  height: 0px;
+  top: 0px;
+  left: 0px;
 }
