@@ -1,0 +1,56 @@
+.container{
+  // overflow: scroll;
+  // padding-left: 12px;
+  // padding-right: 12px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 16px;
+  padding-top: 12px;
+  height: 100%;
+  width: 99%;
+}
+
+.imgbox
+{
+  // overflow: hidden;
+  border-radius: 16px;
+  aspect-ratio: 1/1;
+}
+
+// image cropping
+  // img{
+  //   width:30px;
+  // }
+  // .img{
+  //   height: 100%;
+  //   width: 100%;
+  // }
+
+  .me{
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    border-radius: 12px;
+
+  }
+
+//
+
+.info{
+  display: flex;
+  // justify-content: center;
+}
+
+.img+links
+{
+  width: 50%;
+  // flex-shrink: 0;
+  flex-grow: 1;
+  box-sizing: border-box;
+
+}
+
+.about+skills{
+  width: 100%;
+  flex-grow: 1;
+}

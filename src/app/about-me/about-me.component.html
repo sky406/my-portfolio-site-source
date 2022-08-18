@@ -1,0 +1,58 @@
+<div class = 'container'>
+  <h1 class="name windowtext">{{about.name}}</h1>
+  <div class="info">
+    <div id="img+links">
+      <div [ngStyle]="{'background-image':'url('+imageurl+about.photo.data.attributes.url+')'}" class="me imgbox"></div>
+
+      <!-- <div class="imgcrop me">
+        <img class="img" src="{{imageurl+about.photo.data.attributes.url}}" alt="{{imageurl+about.photo.data.attributes.alternativeText}}" srcset="">
+      </div> -->
+
+      <div class="links">
+
+        <p class="windowtxt">Full-stack web dev</p>
+
+        <div class="link containter">
+          <a href="{{i.attributes.link}}" *ngFor="let i of links"><div>
+            <img src="{{imageurl+i.attributes.icon.data.attributes.url}}"
+              alt="{{imageurl+i.attributes.icon.data.attributes.alternativeText}}"></div></a>
+        </div>
+      </div>
+    </div>
+
+    <div id="about+skills">
+      <h1 class="header windowtext">About me:</h1>
+      <p class="about windowtext">{{about.about}}</p>
+      <h2 class="header windowtext">profficient in</h2>
+
+      <div class="profcontainer">
+        <div *ngFor="let i of proff">
+          <img src="{{imageurl+i.attributes.icon.data.attributes.url}}"
+          alt="{{imageurl+i.attributes.icon.data.attributes.alternativeText}}" srcset="">
+          <p class="orofname windowtext">{{i.attributes.name}}</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <h1 class="title windowtext">Education</h1>
+  <div id="educontainer">
+    <div class="edu" *ngFor="let i of edu">
+      <div class="imgcrop schoollogo">
+        <img src="{{imageurl+i.attributes.img.data.attributes.url}}"
+        alt="{{imageurl+i.attributes.img.data.attributes.alternativeText}}">
+      </div>
+
+      <div class="name+course">
+        <h1 class="sname windowtext">{{i.attributes.name}}</h1>
+        <p class="course windowtext">{{i.attributes.course}}</p>
+      </div>
+    </div>
+  </div>
+
+  <h1 class="title windowtext">has worked with</h1>
+  <div id="workedwith">
+    <div class="imgcrop workedwith" *ngFor="let i of ww"></div>
+  </div>
+</div>

@@ -157,10 +157,12 @@ height: fit-content;
   font-family: 'Inter', sans-serif;
   font-weight: 400;
 }
-.container
+.wincontainer
 {
   // height: 70%;
   flex-grow: 1;
+  box-sizing: border-box;
+  overflow: scroll;
   background-color: rgba($color: black, $alpha: 0.9);
 }
 

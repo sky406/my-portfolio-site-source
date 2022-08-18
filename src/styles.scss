@@ -22,3 +22,35 @@ a
     text-decoration: none;
     color: n;
   }
+
+  ::-webkit-scrollbar-track
+{
+  background-color: black;
+}
+::-webkit-scrollbar
+{
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb
+{
+  border-radius: 25px;
+  background: #3b3b3b;
+  // border: white solid 0.3px;
+  transition: all 10ms0.7s;
+}
+
+::-webkit-scrollbar-thumb:hover
+{
+  // border: solid #c9884e 1px;
+  background: #e2e2e2;
+}
+
+.windowtext{
+  color: white;
+  margin: 0px;
+  // text-align: left;
+  // font-size:16pt;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+}
