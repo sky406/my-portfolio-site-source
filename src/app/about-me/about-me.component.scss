@@ -7,14 +7,34 @@
   padding-bottom: 16px;
   padding-top: 12px;
   height: 100%;
-  width: 99%;
+  width: 94%;
+}
+
+.header{
+  font-size: 22pt;
+  // font-weight: 200;
+}
+
+.about{
+  font-size: 11pt;
+  margin-top: 11px;
+  margin-bottom: 11px;
+}
+
+.aboutcontainer{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .imgbox
 {
   // overflow: hidden;
-  border-radius: 16px;
+  // border-radius: 16px;
   aspect-ratio: 1/1;
+  background-position: center;
+    background-size: contain;
+  background-repeat: no-repeat;
 }
 
 // image cropping
@@ -37,20 +57,104 @@
 //
 
 .info{
-  display: flex;
+  // display: grid;
+  // grid-template-columns: auto auto;
   // justify-content: center;
+  display: flex;
+  gap: 12px;
 }
 
-.img+links
+#imglinks
 {
-  width: 50%;
-  // flex-shrink: 0;
-  flex-grow: 1;
+
+  // flex-shrink: 1;
   box-sizing: border-box;
+  min-width: 30%;
 
 }
 
-.about+skills{
+#aboutskills{
   width: 100%;
+  // bottom: 12px;
+  padding-top: 30px;
+  margin-left:12px ;
+  // flex-grow: 1;
+}
+
+.links{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.linkcontainer{
+  display: flex;
+  flex-direction: row;
+  width:100%;
   flex-grow: 1;
+}
+
+.link{
+  width: 40px;
+  margin-left:6px ;
+}
+
+
+// pofficiencies
+.proficon
+{
+  width: 100%;
+}
+
+.prof{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.profname{
+  font-size: small;
+}
+
+.profcontainer{
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  gap: 19px;
+  width: 40%;
+  margin:14px  ;
+}
+
+#profcon
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+// .prof{
+//   width: 60px;
+// }
+.ed
+{
+  margin-top: 20px;
+}
+.ed h1
+{
+  margin-bottom: 20px;
+}
+
+#educontainer{
+  display: grid;
+  grid-template-columns:50% 50% ;
+  width: 100%;
+}
+.edu{
+  display: flex;
+  align-items: center;
+
+}
+.schoollogo{
+  width: 100px;
+  margin-right: 20px;
+  border-radius: 12px;
 }
