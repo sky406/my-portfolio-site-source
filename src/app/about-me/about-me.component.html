@@ -30,7 +30,7 @@
       </div>
 
       <div id="profcon">
-        <h2 class="header windowtext" >Proficient in:</h2>
+        <h2 class="header windowtext proftitle" >Proficient in:</h2>
 
         <div class="profcontainer">
           <div *ngFor="let i of proff" class="prof">
@@ -41,11 +41,7 @@
       </div>
         </div>
       </div>
-
-    </div>
-  </div>
-
-  <div class="ed">
+<div class="ed">
     <h1 class="title windowtext">Education</h1>
     <div id="educontainer">
       <div class="edu" *ngFor="let i of edu">
@@ -62,8 +58,19 @@
     </div>
   </div>
 
-  <h1 class="title windowtext">has worked with</h1>
-  <div id="workedwith">
-    <div class="imgcrop workedwith" *ngFor="let i of ww"></div>
+  <div class="ww">
+    <h1 class="title windowtext">has worked with</h1>
+    <div id="workedwith">
+      <div class="imgcrop workedwith" *ngFor="let i of ww">
+        <img src="{{imageurl+i.attributes.logo.data.attributes.url}}" alt="{{i.attributes.name}}" srcset="" class="logoimg">
+      </div>
+    </div>
   </div>
 </div>
+
+
+
+
+    </div>
+  </div>
+<!-- note to self group averything that does the same thing  -->

@@ -5,17 +5,17 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class ProjectservService {
-  url = "http://localhost:6969"
+  url = "http://localhost:6969/api"
 
   constructor(private client:HttpClient) { }
 
   getprojects()
   {
-    return this.client.get(`${this.url}/projects`)
+    return this.client.get(`${this.url}/projects?populate=main_img,other_imgs,icon_img`)
   }
 
   getproject(id:number)
   {
-    return this.client.get(`${this.url}/projects/${id}`)
+    return this.client.get(`${this.url}/projects/${id}?populate=main_img,other_imgs,icon_img`)
   }
 }

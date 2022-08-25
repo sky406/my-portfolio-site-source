@@ -8,12 +8,16 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./projects.component.scss']
 })
 export class ProjectsComponent implements OnInit {
-  projects:object = {}
+  projects:any = {}
+  projectkeys:any = Object.keys(this.projects)
   constructor(private proj:ProjectservService, private route:ActivatedRoute) { }
 
   ngOnInit(): void {
+    let temp:any = {}
     this.proj.getprojects().subscribe(p =>{
-      this.projects = p;
+      temp = p
+      this.projects = temp.data
+      console.log(typeof(this.projects))
       console.log(this.projects)
     })
   }

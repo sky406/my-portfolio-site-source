@@ -12,7 +12,8 @@ const routes: Routes = [
   {path:"projects/:type",component:ProjectsComponent},
   {path:"proj",component:ProjectsComponent},
   {path:"project",component:ProjectComponent},
-  {path:"me",component:AboutMeComponent}
+  {path:"me",component:AboutMeComponent},
+  // {path:'',redirectTo:}
 ];
 
 @NgModule({

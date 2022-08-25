@@ -4,7 +4,7 @@
   // padding-right: 12px;
   margin-left: auto;
   margin-right: auto;
-  padding-bottom: 16px;
+  // padding-bottom: 16px;
   padding-top: 12px;
   height: 100%;
   width: 94%;
@@ -91,13 +91,20 @@
   display: flex;
   flex-direction: row;
   width:100%;
+  flex-wrap: wrap;
   flex-grow: 1;
 }
 
 .link{
   width: 40px;
   margin-left:6px ;
+  transition: all 0.5s;
 }
+
+.link:hover{
+  transform: scale(120%);
+}
+
 
 
 // pofficiencies
@@ -111,6 +118,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 40px;
 }
 
 .profname{
@@ -118,18 +126,29 @@
 }
 
 .profcontainer{
-  display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
+  display: flex;
+  // grid-template-columns: 16% 16% 16% 16% 16% 16%;
   gap: 19px;
   width: 40%;
-  margin:14px  ;
+  // margin:14px  ;
+  margin-top: 20px;
+  box-sizing: content-box;
+}
+.proftitle
+{
+  margin-top: 20px;
+}
+.profname
+{
+  text-align: center;
+  // font-size: 11pt;
 }
 
 #profcon
 {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start
 }
 // .prof{
 //   width: 60px;
@@ -157,4 +176,24 @@
   width: 100px;
   margin-right: 20px;
   border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.ww
+{
+  margin-top: 20px;
+}
+
+#workedwith{
+  display:flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.logoimg{
+  height: 40px;
+}
+.workedwith{
+  width: fit-content;
+  margin-right:14px;
 }
