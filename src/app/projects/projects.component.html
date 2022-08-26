@@ -1,6 +1,12 @@
 <div id="browser">
-  <div class="folders"></div>
+  <div class="folders">
+
+  </div>
   <div class="filegrid">
-    <div class="file" *ngFor="let i of projectkeys"></div>
+    <a routerLink="{{'../../project/'+i}}" *ngFor="let i of projectkeys">
+      <div class="file" [ngStyle]="{'background-image':'url('+serverurl+projects[i].attributes.icon_img.data.attributes.url+')'}">
+        <h1 class="windowtext title">{{projects[i].attributes.name}}</h1>
+      </div>
+    </a>
   </div>
 </div>

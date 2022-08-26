@@ -6,12 +6,12 @@ import { Aboutme } from '../interfaces/aboutme';
   providedIn: 'root'
 })
 export class MeservService {
-  url = "http://localhost:6969/api/about-me?populate=photo"
+  url = "https://portfoliodata-7k76v.ondigitalocean.app/api/about-me?populate=photo"
   linksurl = "/api/social-links?populate=icon"
   skillurl = "/api/skills?populate=icon"
   schoolurl = "/api/educations?populate=img"
   workedurl = "/api/worked-withs?populate=logo"
-  imurl = "http://localhost:6969"
+  imurl = "https://portfoliodata-7k76v.ondigitalocean.app"
 
   constructor(private client:HttpClient) {}
 

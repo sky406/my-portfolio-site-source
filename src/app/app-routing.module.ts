@@ -11,7 +11,7 @@ const routes: Routes = [
   // {path:'home/:window',component:HomeComponent}
   {path:"projects/:type",component:ProjectsComponent},
   {path:"proj",component:ProjectsComponent},
-  {path:"project",component:ProjectComponent},
+  {path:"project/:id",component:ProjectComponent},
   {path:"me",component:AboutMeComponent},
   // {path:'',redirectTo:}
 ];

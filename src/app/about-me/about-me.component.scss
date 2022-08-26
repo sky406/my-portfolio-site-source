@@ -127,6 +127,7 @@
 
 .profcontainer{
   display: flex;
+  flex-wrap: wrap;
   // grid-template-columns: 16% 16% 16% 16% 16% 16%;
   gap: 19px;
   width: 40%;

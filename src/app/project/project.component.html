@@ -1,9 +1,18 @@
 <div class="project">
-  <h1 class="project_name"></h1>
-  <div class="mainimg"></div>
-  <div class="otherimgs"></div>
+  <h1 class="project_name windowtext header">{{project.data.attributes.name}}</h1>
+  <div class="imgs">
+    <div class="mainimg" [ngStyle]="{'background-image':'url('+url + project.data.attributes.main_img.data.attributes.url}"></div>
+    <div class="otherimgs">
+      <div class="other" *ngFor="let img of getkeys(project.data.attributes.other_imgs.data)" [ngStyle]="{'background-image':'url('+url+project.data.attributes.other_imgs.data[img].attributes.url+')'}"></div>
+    </div>
+  </div>
   <div class="desc">
-    <h1 class="about">About this project</h1>
+    <h1 class="about windowtext">About this project</h1>
+    <article class="windowtext">{{project.data.attributes.description}}</article>
   </div>
   <div class="related"></div>
+
+  <div class="navigation">
+    <a routerLink="{{project}}"></a>
+  </div>
 </div>

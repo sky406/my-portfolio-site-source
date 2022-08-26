@@ -5,7 +5,8 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class ProjectservService {
-  url = "http://localhost:6969/api"
+  url = "https://portfoliodata-7k76v.ondigitalocean.app/api"
+  imgurl ="https://portfoliodata-7k76v.ondigitalocean.app"
 
   constructor(private client:HttpClient) { }
 

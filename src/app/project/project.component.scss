@@ -1,0 +1,42 @@
+.project
+{
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 20px;
+  // justify-content: center;
+  // align-items: center;
+}
+
+.imgs{
+  width: 100%;
+}
+
+.imgs div{
+  background-repeat: no-repeat;
+
+  background-position: center;
+  // border-radius: 40px;
+  margin-top: 20px;
+}
+
+.mainimg
+{
+  height: 700px;
+  background-size: cover;
+}
+.otherimgs
+{
+  display: flex;
+  // justify-content: ;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.other{
+  background-size: contain;
+  height: 200px;
+  width: 33%;
+  min-width: 100px;
+  margin: 15px;
+}

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-
+import { Router,NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'desktop',
@@ -10,11 +10,15 @@ import { ActivatedRoute } from '@angular/router';
 export class HomeComponent implements OnInit {
   windows:any[] =[]
   window:boolean = false
-  constructor(private route:ActivatedRoute) { }
+  constructor(private route:ActivatedRoute, private router:Router) { }
   url:string = "http://localhost:4200/"
   ngOnInit(): void {
-    console.log(window.location.href)
+    // console.log(window.location.href)
     if (this.url!= window.location.href) this.window = true;
+    console.log(this.router.url)
+    if(this.router.url != "/") this.window = true;
+    else; this.window = false
+    console.log(this.window)
   }
   // addwindow(type:string)
   // {
@@ -26,5 +30,10 @@ export class HomeComponent implements OnInit {
   openwindow()
   {
     this.window = true
+  }
+
+  closewindow()
+  {
+    this.window=false
   }
 }
